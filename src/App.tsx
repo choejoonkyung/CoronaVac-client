@@ -1,15 +1,16 @@
 import { css } from "@emotion/react";
 import SvgIcon from "./components/SvgIcon";
+import { RecoilRoot } from "recoil";
 
 function App() {
   return (
-    <div css={style}>
-      <SvgIcon name="spinner" css={spinner} />
-    </div>
+    <>
+      <RecoilRoot>
+        <SvgIcon name="spinner" css={spinner} />
+      </RecoilRoot>
+    </>
   );
 }
-
-const style = css``;
 
 const spinner = css`
   width: 1rem;
