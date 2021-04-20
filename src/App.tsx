@@ -1,13 +1,15 @@
 import { css } from "@emotion/react";
 import SvgIcon from "./components/SvgIcon";
-import { RecoilRoot } from "recoil";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <RecoilRoot>
-        <SvgIcon name="spinner" css={spinner} />
-      </RecoilRoot>
+      <Switch>
+        <Route path="/" exact>
+          <SvgIcon name="spinner" css={spinner} />
+        </Route>
+      </Switch>
     </>
   );
 }
