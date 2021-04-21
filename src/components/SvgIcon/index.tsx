@@ -5,13 +5,11 @@ export type SvgIconType = keyof typeof svg;
 export type SvgIconProps = {
   name: SvgIconType;
   className?: string;
-  style?: React.CSSProperties;
 };
 
-function SvgIcon({ name, className, style }: SvgIconProps) {
+function SvgIcon({ name, className }: SvgIconProps) {
   return React.createElement(svg[name], {
     className,
-    style,
   });
 }
 

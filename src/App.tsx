@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import SvgIcon from "./components/SvgIcon";
 import { Route, Switch } from "react-router-dom";
+import React from "react";
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
 }
 
 const spinner = css`
-  width: 1rem;
-  height: 1rem;
+  width: 5rem;
+  height: 5rem;
 `;
 
 export default App;
