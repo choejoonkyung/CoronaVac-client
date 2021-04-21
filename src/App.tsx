@@ -12,6 +12,10 @@ function App() {
         <Route path="/" exact>
           <SvgIcon name="spinner" css={spinner} />
         </Route>
+        <Route path="/test" exact>
+          <p>test</p>
+          <SvgIcon name="spinner" css={spinner} />
+        </Route>
       </Switch>
       <Global styles={global} />
     </>
