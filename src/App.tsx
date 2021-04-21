@@ -1,8 +1,9 @@
-import { css } from "@emotion/react";
-import SvgIcon from "./components/SvgIcon";
-import { Route, Switch } from "react-router-dom";
 import React from "react";
+import { Global, css } from "@emotion/react";
+import { Route, Switch } from "react-router-dom";
+import SvgIcon from "./components/SvgIcon";
 import palette from "./lib/styles/palette";
+import global from "./lib/styles/global";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <SvgIcon name="spinner" css={spinner} />
         </Route>
       </Switch>
+      <Global styles={global} />
     </>
   );
 }
