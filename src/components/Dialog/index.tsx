@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
-import palette from "../../../lib/styles/palette";
-import { resetButton } from "../../../lib/styles/custom";
+import palette from "../../lib/styles/palette";
+import { resetButton } from "../../lib/styles/custom";
 
 export type DialogProps = {
   visible: boolean;
