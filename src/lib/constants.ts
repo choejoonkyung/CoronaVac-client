@@ -1,1 +1,1 @@
-export const CONSTANS = "CONSTANTS"
+export const CONSTANS = "CONSTANTS TEST"
