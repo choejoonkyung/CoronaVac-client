@@ -14,7 +14,7 @@ function App() {
           <SvgIcon name="spinner" css={spinner} />
         </Route>
         <Route path="/loading" exact>
-          <LoadingSpinner />
+          <LoadingSpinner size="1.5rem" />
         </Route>
       </Switch>
       <Global styles={global} />
