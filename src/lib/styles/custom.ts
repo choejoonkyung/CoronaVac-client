@@ -7,3 +7,8 @@ export const resetButton = css`
   padding: 0;
   cursor: pointer;
 `;
+
+export const resetP = css`
+  margin: 0;
+  padding: 0;
+`;
