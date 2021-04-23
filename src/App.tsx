@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import SvgIcon from "./components/SvgIcon";
 import palette from "./lib/styles/palette";
 import global from "./lib/styles/global";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 function App() {
   return (
@@ -12,9 +13,8 @@ function App() {
         <Route path="/" exact>
           <SvgIcon name="spinner" css={spinner} />
         </Route>
-        <Route path="/test" exact>
-          <p>test</p>
-          <SvgIcon name="spinner" css={spinner} />
+        <Route path="/loading" exact>
+          <LoadingSpinner />
         </Route>
       </Switch>
       <Global styles={global} />
