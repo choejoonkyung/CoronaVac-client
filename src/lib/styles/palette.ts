@@ -1,5 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
-// https://material-ui.com/customization/color/#color-palette
+// ref: https://material-ui.com/customization/color/#color-palette
+
 export const red = {
   "50": "#ffebee",
   "100": "#ffcdd2",
