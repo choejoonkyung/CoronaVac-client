@@ -16,8 +16,8 @@ export type DialogProps = {
 function Dialog({
   title,
   message,
-  confirmText = "OK",
-  cancelText = "CANCEL",
+  confirmText = "확인",
+  cancelText = "취소",
   onConfirm,
   onCancel,
   isDestructive = false,
