@@ -8,10 +8,7 @@ function GNB({}: GNBProps) {
 }
 
 const gnbStyle = css`
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 3.1rem;
+  height: 3.125rem;
   background-color: ${palette.black};
 `;
 

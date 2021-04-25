@@ -1,1 +1,1 @@
-export const CONSTANS = "CONSTANTS TEST"
+export const LEFT_SIDE_BAR_WIDTH = "16.25rem";
