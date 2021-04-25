@@ -10,8 +10,9 @@ function App() {
   return (
     <>
       <div id="portal" />
+      <Global styles={global} />
       <Switch>
-        <Route path={["/", "/workspace"]} exact>
+        <Route path={["/", "/loading", "/test"]} exact>
           <Layout>
             <Layout.Side>
               <GNB />
@@ -26,7 +27,6 @@ function App() {
           </Layout>
         </Route>
       </Switch>
-      <Global styles={global} />
     </>
   );
 }

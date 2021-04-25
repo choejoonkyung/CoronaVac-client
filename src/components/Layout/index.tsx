@@ -35,7 +35,6 @@ const layoutStyle = css`
 
 const leftBarStyle = css`
   width: ${LEFT_SIDE_BAR_WIDTH};
-  height: 100%;
   position: fixed;
   display: flex;
   padding-top: 3rem;
