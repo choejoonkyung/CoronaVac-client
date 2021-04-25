@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import palette from "../../lib/styles/palette";
-import { resetButton } from "../../lib/styles/custom";
+import { boxShadow, resetButton } from "../../lib/styles/custom";
 
 export type DialogProps = {
   visible: boolean;
@@ -74,7 +74,7 @@ const whiteBox = css`
   padding: 1.5rem;
   background: white;
   border-radius: 1rem;
-  box-shadow: 0px 1rem 1rem rgba(67, 67, 67, 0.03);
+  ${boxShadow}
   color: ${palette.blueGrey[900]};
   h3 {
     margin: 0;

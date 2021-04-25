@@ -1,9 +1,10 @@
+import React from "react";
 import { css } from "@emotion/react";
 
-export type HomeProps = {};
+export type MainProps = {};
 
-function Home({}: HomeProps) {
+function Main({}: MainProps) {
   return <></>;
 }
 
-export default Home;
+export default Main;

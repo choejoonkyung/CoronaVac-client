@@ -12,3 +12,7 @@ export const resetP = css`
   margin: 0;
   padding: 0;
 `;
+
+export const boxShadow = css`
+  box-shadow: 0px 1rem 1rem rgba(67, 67, 67, 0.03);
+`;
