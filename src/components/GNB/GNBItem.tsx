@@ -47,7 +47,7 @@ const itemStyle = css`
     border-left: 0.1875rem solid ${palette.blueGrey[900]};
     padding-left: calc(1rem - 0.1875rem);
     color: ${palette.blueGrey[900]};
-    transition: 0.07s ease-in;
+    transition: 0.1s ease-in;
     span {
       font-weight: bold;
     }
