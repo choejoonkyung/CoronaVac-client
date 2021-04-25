@@ -9,10 +9,12 @@ function App() {
   return (
     <>
       <div id="portal"></div>
-      <GNB />
       <Switch>
-        <Route path="/" exact>
-          <Main />
+        <Route path={["/", "/workspace"]} exact>
+          <GNB />
+          <Route path="/" exact>
+            <Main />
+          </Route>
         </Route>
       </Switch>
       <Global styles={global} />
