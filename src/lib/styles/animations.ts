@@ -21,7 +21,7 @@ export const fadeIn = keyframes`
   }
 `;
 
-export const makeItfadeIn = keyframes`
+export const navFadeIn = keyframes`
   0% {
     background: ${palette.grey[50]};
   }
