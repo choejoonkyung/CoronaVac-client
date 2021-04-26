@@ -12,7 +12,7 @@ function App() {
       <div id="portal" />
       <Global styles={global} />
       <Switch>
-        <Route path={["/", "/loading", "/test", "/test2"]} exact>
+        <Route path={["/", "/loading", "/test", "/test/:id", "/test2"]} exact>
           <Layout>
             <Layout.Side>
               <GNB />
@@ -22,10 +22,14 @@ function App() {
                 <Route path="/" exact>
                   <Main />
                 </Route>
+                <Route path="/test/:id" exact>
+                  <Main />
+                </Route>
               </Switch>
             </Layout.Main>
           </Layout>
         </Route>
+        <Route>404</Route>
       </Switch>
     </>
   );

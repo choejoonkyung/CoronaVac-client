@@ -1,17 +1,26 @@
 import { css } from "@emotion/react";
+import { useRouteMatch } from "react-router-dom";
 import { boxBorder } from "../../lib/styles/custom";
 import GNBItem from "./GNBItem";
 
 export type GNBProps = {};
 
 function GNB({}: GNBProps) {
+  const match = useRouteMatch();
   return (
     <div css={gnbStyle}>
       <div css={logoStyle}>JoonKyung</div>
       <ul css={menuStyle}>
-        <GNBItem icon="spinner" to="/" text="메인" />
-        <GNBItem icon="spinner" to="/test" text="test" />
-        <GNBItem icon="spinner" to="/test2" text="test2" />
+        <GNBItem icon="spinner" text="메인" to="/" />
+        <GNBItem
+          icon="spinner"
+          text="test"
+          to="/test"
+          isActive={() => {
+            return ["/test", "/test/:id"].includes(match.path);
+          }}
+        />
+        <GNBItem icon="spinner" text="test2" to="/test2" />
       </ul>
     </div>
   );

@@ -1,18 +1,23 @@
 import { css } from "@emotion/react";
-import { NavLink } from "react-router-dom";
+import { match, NavLink } from "react-router-dom";
 import palette from "../../lib/styles/palette";
 import SvgIcon, { SvgIconType } from "../SvgIcon";
+import * as H from "history";
 
 export type GNBItemProps = {
   icon: SvgIconType;
   text: string;
   to: string;
+  isActive?<Params extends { [K in keyof Params]?: string }>(
+    match: match<Params> | null,
+    location: H.Location
+  ): boolean;
 };
 
-function GNBItem({ icon, to, text }: GNBItemProps) {
+function GNBItem({ icon, to, text, isActive }: GNBItemProps) {
   return (
     <li css={liStyle}>
-      <NavLink to={to} css={navStyle} exact>
+      <NavLink to={to} css={navStyle} isActive={isActive} exact>
         <SvgIcon name={icon} />
         <span>{text}</span>
       </NavLink>
