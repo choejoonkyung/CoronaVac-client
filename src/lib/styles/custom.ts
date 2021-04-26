@@ -14,7 +14,7 @@ export const resetP = css`
   padding: 0;
 `;
 
-export const boxShadow = css`
+export const dialogShadow = css`
   box-shadow: 0px 1rem 1rem rgba(67, 67, 67, 0.03);
 `;
 

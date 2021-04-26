@@ -1,1 +1,1 @@
-export const LEFT_SIDE_BAR_WIDTH = "16.25rem";
+export const LEFT_SIDE_BAR_WIDTH = "15rem";

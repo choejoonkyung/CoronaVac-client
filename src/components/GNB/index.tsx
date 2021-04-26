@@ -7,10 +7,11 @@ export type GNBProps = {};
 function GNB({}: GNBProps) {
   return (
     <div css={gnbStyle}>
-      <div css={logoStyle}>joonkyung</div>
+      <div css={logoStyle}>JoonKyung</div>
       <ul css={menuStyle}>
         <GNBItem icon="spinner" to="/" text="메인" />
         <GNBItem icon="spinner" to="/test" text="test" />
+        <GNBItem icon="spinner" to="/test2" text="test2" />
       </ul>
     </div>
   );
