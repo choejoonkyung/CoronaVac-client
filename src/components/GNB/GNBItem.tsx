@@ -11,8 +11,8 @@ export type GNBItemProps = {
 
 function GNBItem({ icon, to, text }: GNBItemProps) {
   return (
-    <li>
-      <NavLink to={to} css={itemStyle} exact>
+    <li css={liStyle}>
+      <NavLink to={to} css={navStyle} exact>
         <SvgIcon name={icon} />
         <span>{text}</span>
       </NavLink>
@@ -20,7 +20,17 @@ function GNBItem({ icon, to, text }: GNBItemProps) {
   );
 }
 
-const itemStyle = css`
+const liStyle = css`
+  &:first-child {
+    border-top-left-radius: 0.75rem;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 0.75rem;
+  }
+`;
+
+const navStyle = css`
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -47,7 +57,10 @@ const itemStyle = css`
     border-left: 0.1875rem solid ${palette.blueGrey[900]};
     padding-left: calc(1rem - 0.1875rem);
     color: ${palette.blueGrey[900]};
-    transition: 0.1s ease-in;
+    transition: 0.08s ease-in;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+
     span {
       font-weight: bold;
     }

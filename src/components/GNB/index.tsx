@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
 import { boxBorder } from "../../lib/styles/custom";
-import palette from "../../lib/styles/palette";
 import GNBItem from "./GNBItem";
 
 export type GNBProps = {};
