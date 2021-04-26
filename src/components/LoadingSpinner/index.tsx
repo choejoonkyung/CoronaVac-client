@@ -1,4 +1,5 @@
-import { css, keyframes } from "@emotion/react";
+import { css } from "@emotion/react";
+import { rotate } from "../../lib/styles/animations";
 import palette from "../../lib/styles/palette";
 import SvgIcon from "../SvgIcon";
 
@@ -14,20 +15,11 @@ function LoadingSpinner({
   return <SvgIcon name="spinner" css={spinner(size, color)} />;
 }
 
-const animation = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-}
-`;
-
 const spinner = (size: string, color: string) => css`
   width: ${size};
   height: ${size};
   color: ${color};
-  animation: ${animation} 0.85s ease-in-out infinite;
+  animation: ${rotate} 0.85s ease-in-out infinite;
 `;
 
 export default LoadingSpinner;

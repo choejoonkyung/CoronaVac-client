@@ -3,6 +3,7 @@ import { match, NavLink } from "react-router-dom";
 import palette from "../../lib/styles/palette";
 import SvgIcon, { SvgIconType } from "../SvgIcon";
 import * as H from "history";
+import { fadeIn, makeItfadeIn } from "../../lib/styles/animations";
 
 export type GNBItemProps = {
   icon: SvgIconType;
@@ -65,7 +66,9 @@ const navStyle = css`
     border-top-left-radius: inherit;
     border-bottom-left-radius: inherit;
 
-    transition: 0.08s ease-in;
+    transition: 0.1s ease-in;
+    animation: ${makeItfadeIn} 0.5s ease-in-out 1;
+
     span {
       font-weight: bold;
     }

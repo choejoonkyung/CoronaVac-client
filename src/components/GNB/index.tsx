@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { useRouteMatch } from "react-router-dom";
-import { boxBorder } from "../../lib/styles/custom";
+import { boxBorder } from "../../lib/styles/customs";
 import GNBItem from "./GNBItem";
 
 export type GNBProps = {};
