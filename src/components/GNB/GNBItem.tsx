@@ -66,7 +66,6 @@ const navStyle = css`
     border-top-left-radius: inherit;
     border-bottom-left-radius: inherit;
 
-    transition: 0.1s ease-in;
     animation: ${navFadeIn} 0.5s ease-in-out 1;
 
     span {

@@ -22,9 +22,7 @@ function App() {
                 <Route path="/" exact>
                   <Main />
                 </Route>
-                <Route path="/test/:id" exact>
-                  <Main />
-                </Route>
+                <Route path="/test/:id" exact></Route>
               </Switch>
             </Layout.Main>
           </Layout>
