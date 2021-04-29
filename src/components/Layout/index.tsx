@@ -42,9 +42,10 @@ const leftBarStyle = css`
 `;
 
 const mainStyle = css`
-  max-width: 31.875rem;
+  max-width: 37.5rem;
+  width: 100%;
   margin-left: ${LEFT_SIDE_BAR_WIDTH};
-  padding-left: 2rem;
+  padding-left: 5rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
 `;

@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "@emotion/react";
 import StatusBoard from "../../components/StatusBoard";
 
 export type MainProps = {};
