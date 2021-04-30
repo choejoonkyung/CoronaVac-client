@@ -5,8 +5,8 @@ export const resetButton = css`
   border: none;
   outline: none;
   background: none;
-  padding: 0;
   cursor: pointer;
+  padding: 0;
 `;
 
 export const resetP = css`

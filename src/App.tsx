@@ -14,9 +14,9 @@ function App() {
       <Switch>
         <Route path={["/", "/loading", "/test", "/test/:id", "/test2"]} exact>
           <Layout>
-            <Layout.Side>
+            <Layout.Aside>
               <GNB />
-            </Layout.Side>
+            </Layout.Aside>
             <Layout.Main>
               <Switch>
                 <Route path="/" exact>

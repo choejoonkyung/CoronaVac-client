@@ -13,7 +13,7 @@ export type SideProps = {
   children: React.ReactNode;
 };
 
-function Side({ children }: SideProps) {
+function Aside({ children }: SideProps) {
   return <aside css={leftBarStyle}>{children}</aside>;
 }
 
@@ -25,7 +25,7 @@ function Main({ children }: MainProps) {
   return <main css={mainStyle}>{children}</main>;
 }
 
-Layout.Side = Side;
+Layout.Aside = Aside;
 Layout.Main = Main;
 
 const layoutStyle = css`
@@ -42,9 +42,9 @@ const leftBarStyle = css`
 `;
 
 const mainStyle = css`
+  margin-left: ${LEFT_SIDE_BAR_WIDTH};
   max-width: 37.5rem;
   width: 100%;
-  margin-left: ${LEFT_SIDE_BAR_WIDTH};
   padding-left: 5rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
