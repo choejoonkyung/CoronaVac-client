@@ -1,4 +1,6 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# goData api config
+src/lib/config.ts
+
 # vscode config
 .vscode
 
