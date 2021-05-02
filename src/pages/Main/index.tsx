@@ -1,4 +1,3 @@
-import React from "react";
 import StatusBoard from "../../components/StatusBoard";
 
 export type MainProps = {};
