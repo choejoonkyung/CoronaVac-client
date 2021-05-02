@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 // ref: https://material-ui.com/customization/color/#color-palette
 
 export const red = {
