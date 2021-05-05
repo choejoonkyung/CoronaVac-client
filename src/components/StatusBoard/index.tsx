@@ -5,7 +5,7 @@ import { boxBorder } from "../../lib/styles/customs";
 export type StatusBoardProps = {};
 
 function StatusBoard({}: StatusBoardProps) {
-  return <div css={statusBoardStyle}>status board</div>;
+  return <div css={statusBoardStyle}>RL</div>;
 }
 
 const statusBoardStyle = css`

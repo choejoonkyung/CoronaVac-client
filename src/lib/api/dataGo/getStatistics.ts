@@ -32,7 +32,7 @@ export type StatisticsRes = {
   data: Statistics[];
 };
 
-export async function statistics(data: StatisticsReq) {
+export async function getStatistics(data: StatisticsReq) {
   const response = await client.get<StatisticsRes>(
     `/15077756/v1/vaccine-stat`,
     {
