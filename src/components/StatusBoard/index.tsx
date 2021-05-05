@@ -2,10 +2,12 @@ import React from "react";
 import { css } from "@emotion/react";
 import { boxBorder } from "../../lib/styles/customs";
 
-export type StatusBoardProps = {};
+export type StatusBoardProps = {
+  sido: string;
+};
 
-function StatusBoard({}: StatusBoardProps) {
-  return <div css={statusBoardStyle}>dd</div>;
+function StatusBoard({ sido }: StatusBoardProps) {
+  return <div css={statusBoardStyle}>{sido}</div>;
 }
 
 const statusBoardStyle = css`

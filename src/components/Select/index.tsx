@@ -5,15 +5,16 @@ import SvgIcon from "../SvgIcon";
 import palette from "../../lib/styles/palette";
 
 export type SelectProps = {
-  items: string[];
+  list: string[];
+  onChange(e: React.ChangeEvent<HTMLSelectElement>): void;
 };
 
-function Select({ items = [] }: SelectProps) {
+function Select({ list = [], onChange }: SelectProps) {
   return (
     <div css={wrapperStyle}>
-      <select css={selectStyle}>
-        {items.map((sido) => (
-          <option>{sido}</option>
+      <select css={selectStyle} onChange={onChange} defaultValue={list[0]}>
+        {list.map((v, i) => (
+          <option key={i}>{v}</option>
         ))}
       </select>
       <SvgIcon name="arrow" />
