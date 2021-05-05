@@ -1,6 +1,5 @@
 import React from "react";
 import Select from "../../components/Select";
-import { css } from "@emotion/react";
 import StatusBoard from "../../components/StatusBoard";
 import { SIDO } from "../../lib/constants";
 
