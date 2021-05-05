@@ -1,3 +1,4 @@
+import React from "react";
 import { css } from "@emotion/react";
 import { LEFT_SIDE_BAR_WIDTH } from "../../lib/constants";
 

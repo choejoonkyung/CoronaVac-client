@@ -1,3 +1,4 @@
+import React from "react";
 import { css } from "@emotion/react";
 import palette from "../../lib/styles/palette";
 import { dialogShadow, resetButton } from "../../lib/styles/customs";
