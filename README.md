@@ -18,4 +18,6 @@
 
 vercel를 통하여 배포 되었습니다. Environments를 확인해주세요.
 
-## 빌드 방법
+## Run on your machine
+
+본인의 컴퓨터에서 프로젝트를 실행하는 방법 입니다. [빌드 방법](GUIDELINES.md).
