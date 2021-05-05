@@ -6,6 +6,7 @@ import GNB from "./components/GNB";
 import Layout from "./components/Layout";
 import Statistics from "./pages/Statistics";
 import Info from "./pages/Info";
+import NotFoundError from "./pages/NotFoundError";
 
 function App() {
   return (
@@ -31,7 +32,9 @@ function App() {
             </Layout.Main>
           </Layout>
         </Route>
-        <Route>404</Route>
+        <Route>
+          <NotFoundError />
+        </Route>
       </Switch>
     </>
   );
