@@ -1,5 +1,5 @@
-# goData api config
-src/lib/config.ts
+# api config
+src/lib/Config.ts
 
 # vscode config
 .vscode

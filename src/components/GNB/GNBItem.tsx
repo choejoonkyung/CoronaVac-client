@@ -40,7 +40,7 @@ const navStyle = css`
   text-decoration: none;
   display: flex;
   align-items: center;
-  height: 3.25rem;
+  height: 3.75rem;
   padding: 1rem;
   color: ${palette.blueGrey[600]};
 
@@ -56,7 +56,6 @@ const navStyle = css`
   span {
     font-size: 1rem;
     margin-left: 1rem;
-    line-height: 1rem;
   }
 
   &.active {

@@ -12,16 +12,16 @@ function GNB({}: GNBProps) {
     <div css={gnbStyle}>
       <div css={logoStyle}>CoronaVac</div>
       <ul css={menuStyle}>
-        <GNBItem icon="spinner" text="통계" to="/" />
+        <GNBItem icon="chart" text="접종 통계" to="/" />
         <GNBItem
-          icon="spinner"
-          text="지도에서 검색"
+          icon="map"
+          text="접종 센터 찾기"
           to="/map"
           isActive={() => {
             return ["/map", "/map/:id"].includes(match.path);
           }}
         />
-        <GNBItem icon="spinner" text="정보" to="/info" />
+        <GNBItem icon="info" text="사이트 정보" to="/info" />
       </ul>
     </div>
   );

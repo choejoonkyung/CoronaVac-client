@@ -30,7 +30,7 @@ Layout.Aside = Aside;
 Layout.Main = Main;
 
 const layoutStyle = css`
-  max-width: 46.875rem;
+  max-width: 60.25rem;
   margin: 0 auto;
 `;
 
@@ -44,7 +44,7 @@ const leftBarStyle = css`
 
 const mainStyle = css`
   margin-left: ${LEFT_SIDE_BAR_WIDTH};
-  max-width: 37.5rem;
+  max-width: calc(61.25rem - ${LEFT_SIDE_BAR_WIDTH});
   width: 100%;
   padding-left: 5rem;
   padding-top: 3rem;
