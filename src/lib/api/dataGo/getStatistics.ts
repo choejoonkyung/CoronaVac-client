@@ -38,7 +38,7 @@ export async function getStatistics(data: StatisticsReq) {
     {
       params: {
         ...data,
-        serviceKey: process.env.REACT_APP_GO_DATA_KEY,
+        serviceKey: process.env.REACT_APP_DATA_GO_KEY,
       },
     }
   );
