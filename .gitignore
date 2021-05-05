@@ -1,6 +1,3 @@
-# api config
-src/lib/Config.ts
-
 # vscode config
 .vscode
 

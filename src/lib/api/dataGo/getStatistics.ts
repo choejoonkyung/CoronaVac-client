@@ -1,4 +1,3 @@
-import Config from "../../Config";
 import client from "../client";
 
 export type StatisticsReq = {
@@ -38,7 +37,7 @@ export async function getStatistics(data: StatisticsReq) {
     {
       params: {
         ...data,
-        serviceKey: Config.dataGoKey,
+        serviceKey: process.env.DATA_GO_KEY,
       },
     }
   );
