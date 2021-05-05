@@ -10,7 +10,7 @@ function GNB({}: GNBProps) {
   const match = useRouteMatch();
   return (
     <div css={gnbStyle}>
-      <div css={logoStyle}>JoonKyung</div>
+      <div css={logoStyle}>CoronaVac</div>
       <ul css={menuStyle}>
         <GNBItem icon="spinner" text="통계" to="/" />
         <GNBItem
