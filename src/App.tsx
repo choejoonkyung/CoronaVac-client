@@ -2,9 +2,10 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { Global } from "@emotion/react";
 import global from "./lib/styles/global";
-import Main from "./pages/Main";
 import GNB from "./components/GNB";
 import Layout from "./components/Layout";
+import Statistics from "./pages/Statistics";
+import Info from "./pages/Info";
 
 function App() {
   return (
@@ -20,10 +21,12 @@ function App() {
             <Layout.Main>
               <Switch>
                 <Route path="/" exact>
-                  <Main />
+                  <Statistics />
                 </Route>
                 <Route path="/map/:id" exact></Route>
-                <Route path="/info" exact></Route>
+                <Route path="/info" exact>
+                  <Info />
+                </Route>
               </Switch>
             </Layout.Main>
           </Layout>

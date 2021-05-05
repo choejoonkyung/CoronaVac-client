@@ -2,7 +2,7 @@
 
 > [Coronavac](https://www.joonkyung.shop)은 공공데이터 API를 이용하여 코로나 백신 예방 접종 통계 데이터를 쉽게 볼 수 있고 백신 예방 접종 센터를 조회 할 수 있는 서비스 입니다.
 
-이 레포는 coronavac의 클라이언트 레포입니다.
+이 레포는 Coronavac의 클라이언트 레포입니다.
 
 ## Project Stack
 

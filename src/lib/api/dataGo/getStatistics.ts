@@ -1,5 +1,6 @@
 import client from "../client";
 
+// EQ("="), GTE(">="), GT(">"), LT("<"), LTE("<=");
 export type StatisticsReq = {
   page: number;
   perPage: number;

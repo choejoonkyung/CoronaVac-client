@@ -2,11 +2,20 @@ import { css } from "@emotion/react";
 import palette from "./palette";
 
 export const resetButton = css`
+  cursor: pointer;
   border: none;
   outline: none;
   background: none;
-  cursor: pointer;
   padding: 0;
+`;
+
+export const resetSelect = css`
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: inherit;
 `;
 
 export const resetP = css`
