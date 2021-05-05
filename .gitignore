@@ -1,5 +1,5 @@
-# api config
-src/lib/Config.ts
+# env
+.env
 
 # vscode config
 .vscode

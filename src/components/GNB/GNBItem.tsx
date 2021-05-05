@@ -28,7 +28,7 @@ function GNBItem({ icon, to, text, isActive }: GNBItemProps) {
 }
 
 const liStyle = css`
-  &:first-child {
+  &:first-of-type {
     border-top-left-radius: 0.75rem;
   }
   &:last-child {

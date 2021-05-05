@@ -1,6 +1,6 @@
-import Config from "../../Config";
 import client from "../client";
 
+// EQ("="), GTE(">="), GT(">"), LT("<"), LTE("<=");
 export type StatisticsReq = {
   page: number;
   perPage: number;
@@ -32,13 +32,13 @@ export type StatisticsRes = {
   data: Statistics[];
 };
 
-export async function statistics(data: StatisticsReq) {
+export async function getStatistics(data: StatisticsReq) {
   const response = await client.get<StatisticsRes>(
     `/15077756/v1/vaccine-stat`,
     {
       params: {
         ...data,
-        serviceKey: Config.dataGoKey,
+        serviceKey: process.env.REACT_APP_GO_DATA_KEY,
       },
     }
   );
