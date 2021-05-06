@@ -4,15 +4,18 @@ import { boxBorder } from "../../lib/styles/customs";
 
 export type SectionBaseProps = {
   children?: React.ReactNode;
-};
+} & React.HTMLAttributes<HTMLElement>;
 
-function SectionBase({ children }: SectionBaseProps) {
-  return <section css={wrapperStyle}>{children}</section>;
+function SectionBase({ children, ...rest }: SectionBaseProps) {
+  return (
+    <section css={wrapperStyle} {...rest}>
+      {children}
+    </section>
+  );
 }
 
 const wrapperStyle = css`
   ${boxBorder}
-  display: flex;
 `;
 
 export default SectionBase;

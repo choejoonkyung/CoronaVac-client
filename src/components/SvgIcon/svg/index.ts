@@ -4,5 +4,6 @@ import { ReactComponent as chart } from "./chart.svg";
 import { ReactComponent as info } from "./info.svg";
 import { ReactComponent as arrow } from "./arrow.svg";
 import { ReactComponent as korea } from "./korea.svg";
+import { ReactComponent as upArrow } from "./upArrow.svg";
 
-export { spinner, map, chart, info, arrow, korea };
+export { spinner, map, chart, info, arrow, korea, upArrow };
