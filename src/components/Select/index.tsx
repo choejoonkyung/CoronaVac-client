@@ -1,18 +1,23 @@
 import React from "react";
 import { css } from "@emotion/react";
-import { boxBorder, resetSelect } from "../../lib/styles/customs";
+import { resetSelect } from "../../lib/styles/customs";
 import SvgIcon from "../SvgIcon";
 import palette from "../../lib/styles/palette";
 
 export type SelectProps = {
   list: string[];
   onChange(e: React.ChangeEvent<HTMLSelectElement>): void;
+  height?: number;
 };
 
-function Select({ list = [], onChange }: SelectProps) {
+function Select({ list = [], onChange, height = 3 }: SelectProps) {
   return (
     <div css={wrapperStyle}>
-      <select css={selectStyle} onChange={onChange} defaultValue={list[0]}>
+      <select
+        css={selectStyle(height)}
+        onChange={onChange}
+        defaultValue={list[0]}
+      >
         {list.map((v, i) => (
           <option key={i}>{v}</option>
         ))}
@@ -23,11 +28,10 @@ function Select({ list = [], onChange }: SelectProps) {
 }
 
 const wrapperStyle = css`
+  flex: 1;
   display: flex;
   position: relative;
   align-items: center;
-  width: 10rem;
-  height: 3rem;
   background-color: ${palette.white};
   border-radius: 0.75rem;
 
@@ -40,12 +44,11 @@ const wrapperStyle = css`
   }
 `;
 
-const selectStyle = css`
+const selectStyle = (height: number) => css`
   ${resetSelect};
-  ${boxBorder};
+  flex: 1;
+  height: ${height}rem;
   background: none;
-  width: inherit;
-  height: inherit;
   padding-left: 1rem;
   font-size: 1rem;
   font-weight: normal;
