@@ -5,7 +5,6 @@ import Select from "../../components/Select";
 import StatusBoard from "../../components/StatusBoard";
 import useSelect from "../../hooks/useSelect";
 import { SIDO } from "../../lib/constants";
-import StatusGraph from "../../components/StatusGraph";
 
 export type StatisticsProps = {};
 
