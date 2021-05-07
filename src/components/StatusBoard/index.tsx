@@ -34,17 +34,25 @@ function StatusBoard({ sido }: StatusBoardProps) {
       <div css={wrapperStyle}>
         <div css={statusStyle}>
           <p css={subTitleStyle}>1차 접종</p>
-          <p css={countStyle(palette.green[600])}>{firstCnt}</p>
+          <p css={countStyle(palette.green[600])}>
+            {firstCnt ? firstCnt : "0"}
+          </p>
           <div css={cntArrowStyle(palette.green[50], palette.green[600])}>
-            <p css={increaseCntStyle(palette.green[600])}>{firstIncrease}</p>
+            <p css={increaseCntStyle(palette.green[600])}>
+              {firstIncrease ? firstIncrease : "0"}
+            </p>
             <SvgIcon name="upArrow" />
           </div>
         </div>
         <div css={statusStyle}>
           <p css={subTitleStyle}>2차 접종</p>
-          <p css={countStyle(palette.blue[600])}>{secondCnt}</p>
+          <p css={countStyle(palette.blue[600])}>
+            {secondCnt ? secondCnt : "0"}
+          </p>
           <div css={cntArrowStyle(palette.blue[50], palette.blue[600])}>
-            <p css={increaseCntStyle(palette.blue[600])}>{secondIncrease}</p>
+            <p css={increaseCntStyle(palette.blue[600])}>
+              {secondIncrease ? secondIncrease : "0"}
+            </p>
             <SvgIcon name="upArrow" />
           </div>
         </div>
