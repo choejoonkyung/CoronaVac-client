@@ -30,9 +30,11 @@ function GNBItem({ icon, to, text, isActive }: GNBItemProps) {
 const liStyle = css`
   &:first-of-type {
     border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
   }
   &:last-child {
     border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
   }
 `;
 
@@ -63,8 +65,10 @@ const navStyle = css`
     border-left: 0.1875rem solid ${palette.blueGrey[900]};
     padding-left: calc(1rem - 0.1875rem);
     color: ${palette.blueGrey[900]};
+    border-top-right-radius: inherit;
     border-top-left-radius: inherit;
     border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
 
     animation: ${navFadeIn} 0.5s ease-in-out 1;
 

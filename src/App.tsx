@@ -7,8 +7,10 @@ import Layout from "./components/Layout";
 import Statistics from "./pages/Statistics";
 import Info from "./pages/Info";
 import NotFoundError from "./pages/NotFoundError";
+import { getDataGoDate } from "./lib/utils/date";
 
 function App() {
+  getDataGoDate();
   return (
     <>
       <div id="portal" />

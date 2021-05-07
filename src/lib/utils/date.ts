@@ -13,9 +13,11 @@ export function dateToString(date: Date) {
   return year + "-" + month + "-" + day;
 }
 
-//해당 데이터는 질병관리청에서 전일 0시 기준으로 집계된 자료를 매일 9시 35분에 갱신하고 있습니다.
-// TODO: 위 기준으로 날짜를 뽑는 함수 만들어야함.
+//데이터는 질병관리청에서 전일 0시 기준으로 집계된 자료를 매일 9시 35분에 갱신하고 있습니다.
 export function getDataGoDate() {
   const date = new Date();
-  console.log(date);
+  // 10시 이전 -> 이전 날짜
+  // 10시 이후 -> 지금 날짜
+  if (date.getHours() > 10) return dateToString(date);
+  return dateToString(new Date(date.setDate(date.getDate() - 1)));
 }

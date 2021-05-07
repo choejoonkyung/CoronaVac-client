@@ -7,6 +7,7 @@ import useStatisticsQuery from "../../lib/querys/useStatisticsQuery";
 import SvgIcon from "../SvgIcon";
 import { fadeIn } from "../../lib/styles/animations";
 import StatusBoardSkeleton from "./StatusBoardSkeleton";
+import { getDataGoDate } from "../../lib/utils/date";
 
 export type StatusBoardProps = {
   sido: string;
@@ -16,7 +17,7 @@ function StatusBoard({ sido }: StatusBoardProps) {
   const { data, isLoading } = useStatisticsQuery({
     page: 1,
     perPage: 1,
-    "cond[baseDate::GTE]": "2021-05-06",
+    "cond[baseDate::GTE]": getDataGoDate(),
     "cond[sido::EQ]": sido,
   });
 
