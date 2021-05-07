@@ -7,11 +7,14 @@ export default function useStatusBoard(data: StatisticsRes | undefined) {
   const [secondCnt, setSecondCnt] = useState<string>();
   const [firstIncrease, setFirstIncrease] = useState<string>();
   const [secondIncrease, setSecondIncrease] = useState<string>();
-  const [date, setDate] = useState<string>();
+  const [baseDate, setBaseDate] = useState<string>();
+  const [baseSido, setBaseSido] = useState<string>();
 
   useEffect(() => {
     if (data) {
-      console.log(data);
+      console.log(data.data[0].sido);
+      setBaseDate(data.data[0].baseDate);
+      setBaseSido(data.data[0].sido);
       setfirstCnt(numberWithCommas(data.data[0].totalFirstCnt));
       setSecondCnt(numberWithCommas(data.data[0].totalSecondCnt));
       setFirstIncrease(
@@ -24,9 +27,15 @@ export default function useStatusBoard(data: StatisticsRes | undefined) {
           data.data[0].totalSecondCnt - data.data[0].accumulatedSecondCnt
         )
       );
-      setDate(data.data[0].baseDate);
     }
   }, [data]);
 
-  return { firstCnt, secondCnt, firstIncrease, secondIncrease, date };
+  return {
+    firstCnt,
+    secondCnt,
+    firstIncrease,
+    secondIncrease,
+    baseDate,
+    baseSido,
+  };
 }

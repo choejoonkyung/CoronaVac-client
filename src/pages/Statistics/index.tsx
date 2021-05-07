@@ -5,6 +5,7 @@ import Select from "../../components/Select";
 import StatusBoard from "../../components/StatusBoard";
 import useSelect from "../../hooks/useSelect";
 import { SIDO } from "../../lib/constants";
+import StatusGraph from "../../components/StatusGraph";
 
 export type StatisticsProps = {};
 
@@ -16,9 +17,11 @@ function Statistics({}: StatisticsProps) {
       <SectionBase>
         <Select list={SIDO} onChange={onChange} />
       </SectionBase>
-      <SectionBase css={statusStyle}>
+      <SectionBase css={boardStyle}>
         <StatusBoard sido={value} />
-        {/* <StatusGraph sido={value} /> */}
+      </SectionBase>
+      <SectionBase css={graphStyle}>
+        <StatusGraph sido={value} />
       </SectionBase>
     </div>
   );
@@ -30,7 +33,11 @@ const wrapperStyle = css`
   }
 `;
 
-const statusStyle = css`
+const boardStyle = css`
+  padding: 1rem;
+`;
+
+const graphStyle = css`
   padding: 1rem;
 `;
 

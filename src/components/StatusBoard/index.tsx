@@ -6,6 +6,7 @@ import palette from "../../lib/styles/palette";
 import useStatisticsQuery from "../../lib/querys/useStatisticsQuery";
 import SvgIcon from "../SvgIcon";
 import { fadeIn } from "../../lib/styles/animations";
+import StatusBoardSkeleton from "./StatusBoardSkeleton";
 
 export type StatusBoardProps = {
   sido: string;
@@ -24,10 +25,10 @@ function StatusBoard({ sido }: StatusBoardProps) {
     firstIncrease,
     secondCnt,
     secondIncrease,
-    date,
+    baseDate,
   } = useStatusBoard(data);
 
-  if (isLoading) return null;
+  if (isLoading) return <StatusBoardSkeleton />;
   return (
     <>
       <div css={wrapperStyle}>
@@ -48,36 +49,35 @@ function StatusBoard({ sido }: StatusBoardProps) {
           </div>
         </div>
       </div>
-      <p css={dateStyle}>기준: {date}</p>
+      {baseDate && <p css={dateStyle}>데이터 기준: {baseDate}</p>}
     </>
   );
 }
 
 const wrapperStyle = css`
   display: flex;
-  justify-content: space-around;
 `;
 
 const statusStyle = css`
   display: flex;
+  flex: 0.5;
   flex-direction: column;
   align-items: center;
-
-  p {
-    ${resetP}
-  }
 `;
 
 const subTitleStyle = css`
-  color: ${palette.blueGrey[600]};
+  ${resetP}
+  color: ${palette.blueGrey[900]};
   font-weight: lighter;
   font-size: 0.9rem;
 `;
 
 const countStyle = (color: string) => css`
+  ${resetP}
   color: ${color};
   font-size: 1.5rem;
   font-weight: bold;
+  margin-top: 0.4rem;
 `;
 
 const cntArrowStyle = (background: string, color: string) => css`
@@ -96,6 +96,9 @@ const cntArrowStyle = (background: string, color: string) => css`
     width: 0.7rem;
     height: 0.7rem;
     transform: translate(30%, 5%);
+  }
+  p {
+    ${resetP}
   }
 `;
 
