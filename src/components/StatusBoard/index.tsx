@@ -58,7 +58,7 @@ function StatusBoard({ sido }: StatusBoardProps) {
           </div>
         </div>
       </div>
-      {baseDate && <p css={dateStyle}>데이터 기준: {baseDate}</p>}
+      {baseDate && <p css={dateStyle}>기준: {baseDate}</p>}
     </>
   );
 }
@@ -104,7 +104,7 @@ const cntArrowStyle = (background: string, color: string) => css`
     color: ${color};
     width: 0.7rem;
     height: 0.7rem;
-    transform: translate(30%, 5%);
+    transform: translate(25%, -3%);
   }
   p {
     ${resetP}
@@ -120,7 +120,7 @@ const dateStyle = css`
   ${resetP}
   margin-top: 1.5rem;
   text-align: right;
-  color: ${palette.blueGrey[600]};
+  color: ${palette.blueGrey[200]};
   font-size: 0.875rem;
 `;
 

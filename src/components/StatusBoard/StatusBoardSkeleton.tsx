@@ -88,7 +88,7 @@ const dateStyle = css`
   margin-top: 1.5rem;
   font-size: 0.875rem;
 
-  margin-left: 25rem;
+  margin-left: 28rem;
   border-radius: 1rem;
   background-color: ${palette.grey[300]};
   color: ${palette.grey[300]};

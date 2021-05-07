@@ -11,7 +11,7 @@ export default function useStatusBoard(data: StatisticsRes | undefined) {
   const [baseSido, setBaseSido] = useState<string>();
 
   useEffect(() => {
-    if (data) {
+    if (data?.data) {
       setBaseDate(data.data[0].baseDate);
       setBaseSido(data.data[0].sido);
       setfirstCnt(numberWithCommas(data.data[0].totalFirstCnt));
