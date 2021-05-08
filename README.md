@@ -14,6 +14,7 @@
 - React-Query
 - Recoil
 - Emotion
+- Echarts
 
 ### Deploy
 

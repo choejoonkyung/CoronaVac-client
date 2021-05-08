@@ -8,9 +8,10 @@ import SvgIcon from "../SvgIcon";
 import { fadeIn } from "../../lib/styles/animations";
 import StatusBoardSkeleton from "./StatusBoardSkeleton";
 import { getDataGoDate } from "../../lib/utils/date";
+import { Sido } from "../../lib/types";
 
 export type StatusBoardProps = {
-  sido: string;
+  sido: Sido;
 };
 
 function StatusBoard({ sido }: StatusBoardProps) {

@@ -1,7 +1,7 @@
-import { Period } from "./types";
+import { Period, Sido } from "./types";
 
 export const LEFT_SIDE_BAR_WIDTH = "15rem";
-export const SIDO = [
+export const SIDO: Sido[] = [
   "전국",
   "서울특별시",
   "경기도",

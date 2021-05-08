@@ -1,17 +1,18 @@
 import React from "react";
 import { css } from "@emotion/react";
 import BoxRadio from "../BoxRadio";
-import useBoxRadio from "../../hooks/useBoxRadio";
+import usePeriodBoxRadio from "../../hooks/usePeriodBoxRadio";
 import { PERIOD_LIST } from "../../lib/constants";
 import Graph from "../Graph";
 import useStatusGraph from "../../hooks/useStatusGraph";
+import { Sido } from "../../lib/types";
 
 export type StatusGraphProps = {
-  sido: string;
+  sido: Sido;
 };
 
 function StatusGraph({ sido }: StatusGraphProps) {
-  const { radioValue, active, handleRadio } = useBoxRadio(PERIOD_LIST, sido);
+  const { period, active, handleRadio } = usePeriodBoxRadio(PERIOD_LIST);
   const {
     dateList,
     firstCntList,
@@ -19,7 +20,7 @@ function StatusGraph({ sido }: StatusGraphProps) {
     firstTotalCntList,
     secondTotalCntList,
     isLoading,
-  } = useStatusGraph(sido, radioValue);
+  } = useStatusGraph(sido, period);
 
   return (
     <div css={statusGraphStyle}>
