@@ -12,7 +12,10 @@ export type StatusGraphProps = {
 
 function StatusGraph({ sido }: StatusGraphProps) {
   const { menu, active, handleRadio } = useBoxRadio(MENU_LIST);
-  const { dateList, firstCntList, secondCntList } = useStatusGraph(sido, menu);
+  const { dateList, firstCntList, secondCntList, isLoading } = useStatusGraph(
+    sido,
+    menu
+  );
 
   return (
     <div css={statusGraphStyle}>

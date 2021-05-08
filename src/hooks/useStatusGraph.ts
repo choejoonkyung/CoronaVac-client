@@ -7,7 +7,7 @@ export default function useStatusGraph(sido: string, menu: Period) {
   const [dateList, setDateList] = useState<string[]>([]);
   const [firstCntList, setFristCntList] = useState<number[]>([]);
   const [secondCntList, setSecondCntList] = useState<number[]>([]);
-  const { data } = useStatisticsQuery({
+  const { data, isLoading } = useStatisticsQuery({
     page: 1,
     perPage: 1000,
     "cond[baseDate::GTE]": calcPeriodDate(menu),
@@ -15,8 +15,13 @@ export default function useStatusGraph(sido: string, menu: Period) {
   });
 
   useEffect(() => {
-    console.log(data);
+    if (!data) return;
+    setDateList(
+      data.data.map((v) => v.baseDate.substring(0, v.baseDate.indexOf(" ")))
+    );
+    setFristCntList(data.data.map((v) => v.firstCnt));
+    setSecondCntList(data.data.map((v) => v.secondCnt));
   }, [sido, menu, data]);
 
-  return { dateList, firstCntList, secondCntList };
+  return { dateList, firstCntList, secondCntList, isLoading };
 }

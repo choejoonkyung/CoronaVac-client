@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef } from "react";
 import * as echarts from "echarts";
 import { css } from "@emotion/react";
+import palette from "../../lib/styles/palette";
 
 export type GraphProps = {
   dateList: string[];
@@ -9,14 +10,14 @@ export type GraphProps = {
 } & React.HTMLAttributes<HTMLDivElement>;
 
 function Graph({ dateList, firstCntList, secondCntList, ...rest }: GraphProps) {
-  const ref = useRef<HTMLDivElement>();
+  const ref = useRef<HTMLDivElement>(null);
 
   const graphOption = useMemo(() => {
     return {
       tooltip: {
         trigger: "axis",
       },
-
+      color: [palette.green[600], palette.blue[600]],
       grid: {
         left: "3%",
         right: "4%",
@@ -29,9 +30,7 @@ function Graph({ dateList, firstCntList, secondCntList, ...rest }: GraphProps) {
         },
       },
       xAxis: {
-        type: "category",
-        boundaryGap: false,
-        data: ["2020-11-1", "周二", "周三", "周四", "周五", "周六", "周日"],
+        data: dateList,
       },
       yAxis: {
         type: "value",
@@ -40,16 +39,16 @@ function Graph({ dateList, firstCntList, secondCntList, ...rest }: GraphProps) {
         {
           name: "1차 접종",
           type: "line",
-          data: [120, 132, 101, 134, 90, 230, 210],
+          data: firstCntList,
         },
         {
           name: "2차 접종",
           type: "line",
-          data: [220, 182, 191, 234, 290, 330, 310],
+          data: secondCntList,
         },
       ],
     };
-  }, [dateList, valueList]);
+  }, [dateList, firstCntList, secondCntList]);
 
   useEffect(() => {
     if (ref.current && graphOption) {
