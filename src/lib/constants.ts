@@ -1,3 +1,5 @@
+import { Period } from "./types";
+
 export const LEFT_SIDE_BAR_WIDTH = "15rem";
 export const SIDO = [
   "전국",
@@ -11,4 +13,4 @@ export const SIDO = [
   "대구광역시",
   "울산광역시",
 ];
-export const MENU_LIST = ["1주", "1달", "3달", "전체"];
+export const MENU_LIST: Period[] = ["1주", "1달", "3달", "전체"];
