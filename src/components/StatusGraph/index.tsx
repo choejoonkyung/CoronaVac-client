@@ -11,7 +11,7 @@ export type StatusGraphProps = {
 };
 
 function StatusGraph({ sido }: StatusGraphProps) {
-  const { radioValue, active, handleRadio } = useBoxRadio(PERIOD_LIST);
+  const { radioValue, active, handleRadio } = useBoxRadio(PERIOD_LIST, sido);
   const {
     dateList,
     firstCntList,
