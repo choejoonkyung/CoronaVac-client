@@ -8,6 +8,7 @@ import Statistics from "./pages/Statistics";
 import Info from "./pages/Info";
 import NotFoundError from "./pages/NotFoundError";
 import { getDataGoDate } from "./lib/utils/date";
+import SearchCenter from "./pages/SearchCenter";
 
 function App() {
   getDataGoDate();
@@ -26,7 +27,9 @@ function App() {
                 <Route path="/" exact>
                   <Statistics />
                 </Route>
-                <Route path="/map/:id" exact></Route>
+                <Route path="/map" exact>
+                  <SearchCenter />
+                </Route>
                 <Route path="/info" exact>
                   <Info />
                 </Route>
