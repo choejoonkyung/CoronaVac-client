@@ -3,18 +3,19 @@ import { css } from "@emotion/react";
 import BoxRadio from "../BoxRadio";
 import useBoxRadio from "../../hooks/useBoxRadio";
 import { MENU_LIST } from "../../lib/constants";
+import Graph from "../Graph";
 
 export type StatusGraphProps = {
   sido: string;
 };
 
-function StatusGraph({}: StatusGraphProps) {
-  const { active, menu, handleRadio } = useBoxRadio(MENU_LIST);
-  console.log(menu);
+function StatusGraph({ sido }: StatusGraphProps) {
+  const { menu, active, handleRadio } = useBoxRadio(MENU_LIST);
 
   return (
     <div css={statusGraphStyle}>
       <BoxRadio list={MENU_LIST} active={active} handleRadio={handleRadio} />
+      <Graph sido={sido} menu={menu} />
     </div>
   );
 }

@@ -9,5 +9,5 @@ export default function useBoxRadio(list: string[]) {
     setActive(index);
   };
 
-  return { active, menu, handleRadio };
+  return { menu, active, handleRadio };
 }
