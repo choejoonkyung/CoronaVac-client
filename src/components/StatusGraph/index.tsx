@@ -2,27 +2,23 @@ import React from "react";
 import { css } from "@emotion/react";
 import BoxRadio from "../BoxRadio";
 import useBoxRadio from "../../hooks/useBoxRadio";
+import { MENU_LIST } from "../../lib/constants";
 
 export type StatusGraphProps = {
   sido: string;
 };
 
-function StatusGraph({ sido }: StatusGraphProps) {
-  const { active, setActive } = useBoxRadio();
+function StatusGraph({}: StatusGraphProps) {
+  const { active, menu, handleRadio } = useBoxRadio(MENU_LIST);
+  console.log(menu);
+
   return (
     <div css={statusGraphStyle}>
-      <BoxRadio
-        list={["1주", "1달", "3달", "전체"]}
-        active={active}
-        onActive={setActive}
-      />
+      <BoxRadio list={MENU_LIST} active={active} handleRadio={handleRadio} />
     </div>
   );
 }
 
-const statusGraphStyle = css`
-  display: flex;
-  justify-content: flex-end;
-`;
+const statusGraphStyle = css``;
 
 export default StatusGraph;

@@ -6,17 +6,17 @@ import { resetButton } from "../../lib/styles/customs";
 export type BoxRadioProps = {
   list: string[];
   active: number;
-  onActive(index: number): void;
+  handleRadio(index: number, menu: string): void;
 };
 
-function BoxRadio({ list, active, onActive }: BoxRadioProps) {
+function BoxRadio({ list, active, handleRadio }: BoxRadioProps) {
   return (
     <div css={wrapperStyle}>
       {list.map((v, i) => (
         <button
           css={itemStyle(active === i)}
           key={i}
-          onClick={() => onActive(i)}
+          onClick={() => handleRadio(i, v)}
         >
           {v}
         </button>

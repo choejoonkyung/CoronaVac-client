@@ -1,7 +1,13 @@
 import { useState } from "react";
 
-export default function useBoxRadio() {
+export default function useBoxRadio(list: string[]) {
+  const [menu, setMenu] = useState(list[0]);
   const [active, setActive] = useState(0);
 
-  return { active, setActive };
+  const handleRadio = (index: number, menu: string) => {
+    setMenu(menu);
+    setActive(index);
+  };
+
+  return { active, menu, handleRadio };
 }
