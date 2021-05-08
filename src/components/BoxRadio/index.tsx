@@ -2,9 +2,10 @@ import React from "react";
 import { css } from "@emotion/react";
 import palette from "../../lib/styles/palette";
 import { resetButton } from "../../lib/styles/customs";
+import { Period } from "../../lib/types";
 
 export type BoxRadioProps = {
-  list: string[];
+  list: Period[];
   active: number;
   handleRadio(index: number, menu: string): void;
 };
@@ -34,16 +35,16 @@ const wrapperStyle = css`
 
 const itemStyle = (active: boolean) => css`
   ${resetButton}
-  padding: 0.85rem;
+  padding: 0.8rem;
   border-radius: inherit;
 
   &:hover {
-    background: ${active ? palette.blueGrey[500] : palette.grey[50]};
+    background: ${active ? palette.blueGrey[600] : palette.grey[50]};
   }
 
   ${active &&
   css`
-    background: ${palette.blueGrey[600]};
+    background: ${palette.blueGrey[700]};
     color: white;
     font-weight: bold;
   `}

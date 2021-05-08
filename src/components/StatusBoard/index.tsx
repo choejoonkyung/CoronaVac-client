@@ -8,13 +8,14 @@ import SvgIcon from "../SvgIcon";
 import { fadeIn } from "../../lib/styles/animations";
 import StatusBoardSkeleton from "./StatusBoardSkeleton";
 import { getDataGoDate } from "../../lib/utils/date";
+import { Sido } from "../../lib/types";
 
 export type StatusBoardProps = {
-  sido: string;
+  sido: Sido;
 };
 
 function StatusBoard({ sido }: StatusBoardProps) {
-  const { data, isLoading } = useStatisticsQuery({
+  const { data, isLoading, error } = useStatisticsQuery({
     page: 1,
     perPage: 1,
     "cond[baseDate::GTE]": getDataGoDate(),
@@ -29,7 +30,7 @@ function StatusBoard({ sido }: StatusBoardProps) {
     baseDate,
   } = useStatusBoard(data);
 
-  if (isLoading) return <StatusBoardSkeleton />;
+  if (isLoading || error) return <StatusBoardSkeleton />;
   return (
     <>
       <div css={wrapperStyle}>

@@ -6,17 +6,18 @@ import palette from "../../lib/styles/palette";
 
 export type SelectProps = {
   list: string[];
+  selected: string;
   onChange(e: React.ChangeEvent<HTMLSelectElement>): void;
   height?: number;
 };
 
-function Select({ list = [], onChange, height = 3 }: SelectProps) {
+function Select({ list = [], onChange, selected, height = 3 }: SelectProps) {
   return (
     <div css={wrapperStyle}>
       <select
         css={selectStyle(height)}
         onChange={onChange}
-        defaultValue={list[0]}
+        defaultValue={selected}
       >
         {list.map((v, i) => (
           <option key={i}>{v}</option>
