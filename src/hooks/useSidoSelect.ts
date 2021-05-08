@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useStatisticsState } from "../atoms/statisticsState";
 import { Sido } from "../lib/types";
 

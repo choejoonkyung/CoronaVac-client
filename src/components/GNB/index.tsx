@@ -21,7 +21,7 @@ function GNB({}: GNBProps) {
             return ["/map", "/map/:id"].includes(match.path);
           }}
         />
-        <GNBItem icon="info" text="사이트 정보" to="/info" />
+        <GNBItem icon="info" text="정보" to="/info" />
       </ul>
     </div>
   );
