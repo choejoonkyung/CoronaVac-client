@@ -9,6 +9,9 @@ export default function useStatisticsQuery(
   return useQuery(createKey(data), () => getStatistics(data), options);
 }
 
-const createKey = (data: StatisticsReq) => ["staticsPage", data.page];
+const createKey = (data: StatisticsReq) => [
+  "statisInfo",
+  `${data["cond[sido::EQ]"]}-${data["cond[baseDate::LTE]"]}-${data["cond[baseDate::GTE]"]}`,
+];
 
 useStatisticsQuery.createKey = createKey;

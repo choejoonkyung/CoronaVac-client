@@ -20,7 +20,7 @@ export type Statistics = {
   totalSecondCnt: number;
   accumulatedFirstCnt: number;
   accumulatedSecondCnt: number;
-  baseDate: Date;
+  baseDate: string;
 };
 
 export type StatisticsRes = {
