@@ -12,7 +12,7 @@ export type StatusGraphProps = {
 };
 
 function StatusGraph({ sido }: StatusGraphProps) {
-  const { period, active, handleRadio } = usePeriodBoxRadio(PERIOD_LIST);
+  const { period, active, handleRadio } = usePeriodBoxRadio(PERIOD_LIST, sido);
   const {
     dateList,
     firstCntList,
