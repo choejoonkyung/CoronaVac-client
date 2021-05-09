@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { useRouteMatch } from "react-router-dom";
 import { boxBorder } from "../../lib/styles/customs";
 import GNBItem from "./GNBItem";
+import { fadeIn } from "../../lib/styles/animations";
 
 export type GNBProps = {};
 
@@ -10,7 +11,9 @@ function GNB({}: GNBProps) {
   const match = useRouteMatch();
   return (
     <div css={gnbStyle}>
-      <div css={logoStyle}>CoronaVac</div>
+      <div css={logoStyle}>
+        <img src="/logo.png" alt="logo" />
+      </div>
       <ul css={menuStyle}>
         <GNBItem icon="chart" text="접종 통계" to="/" />
         <GNBItem
@@ -39,6 +42,11 @@ const logoStyle = css`
   justify-content: center;
   padding: 0.625rem 0;
   margin-bottom: 1rem;
+
+  img {
+    animation: 0.5s ${fadeIn} ease-in;
+    height: 2.5rem;
+  }
 `;
 
 const menuStyle = css`

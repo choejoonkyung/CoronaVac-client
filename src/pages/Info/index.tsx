@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import SectionBase from "../../components/SectionBase";
 import SvgIcon from "../../components/SvgIcon";
 import useInfo from "../../hooks/useInfo";
@@ -11,6 +12,9 @@ function Info({}: InfoProps) {
   const { toGithub } = useInfo();
   return (
     <div css={wrapper}>
+      <Helmet>
+        <title>CoronaVac - 정보</title>
+      </Helmet>
       <SectionBase css={headerStyle}>정보</SectionBase>
       <SectionBase css={infoStyle}>
         <p>
@@ -39,7 +43,7 @@ function Info({}: InfoProps) {
             본 사이트에서 제공하는 정보를 이용 또는 공유하여 문제가 발생할 시
             해당 책임은 전적으로 사용자에게 있음을 알려드립니다.
           </li>
-          <li>문의 사항은 아래의 메일 아이콘을 클릭 후 보내주시면 됩니다.</li>
+          <li>문의 사항은 메일을 이용해주세요.</li>
           <li>현재 본 사이트의 소스코드는 깃 허브에서 공유 중 입니다.</li>
         </ul>
       </SectionBase>
@@ -69,15 +73,17 @@ const headerStyle = css`
 `;
 
 const infoStyle = css`
-  padding: 1rem;
+  padding: 1.5rem;
 
   p {
+    margin: 0;
     color: ${palette.blueGrey[900]};
     font-size: 1.1rem;
   }
 
   ul {
     margin-top: 1.5rem;
+    margin-bottom: 0;
     li + li {
       margin-top: 1rem;
     }

@@ -21,6 +21,7 @@ function Graph({
   ...rest
 }: GraphProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const graphRef = useRef<echarts.ECharts | null>(null);
 
   const graphOption = useMemo(() => {
     return {
@@ -67,10 +68,17 @@ function Graph({
   }, [dateList, firstList, secondList]);
 
   useEffect(() => {
-    if (ref.current && graphOption) {
-      const graph = echarts.init(ref.current);
-      graph.setOption(graphOption);
+    const element = ref.current;
+    if (!element || !graphOption) return;
+
+    let c: echarts.ECharts | null = graphRef.current ?? null;
+    if (!c) {
+      const chart = echarts.init(element);
+      graphRef.current = chart;
+      c = chart;
     }
+
+    c.setOption(graphOption);
   }, [graphOption]);
 
   return (
@@ -102,6 +110,10 @@ const loadingStyle = css`
     width: 3rem;
     height: 3rem;
     color: ${palette.blueGrey[600]};
+  }
+
+  & > div {
+    display: none;
   }
 `;
 const chartStyle = css`

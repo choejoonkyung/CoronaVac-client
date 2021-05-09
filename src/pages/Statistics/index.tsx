@@ -6,6 +6,7 @@ import StatusBoard from "../../components/StatusBoard";
 import useSidoSelect from "../../hooks/useSidoSelect";
 import { SIDO } from "../../lib/constants";
 import StatusGraph from "../../components/StatusGraph";
+import { Helmet } from "react-helmet-async";
 
 export type StatisticsProps = {};
 
@@ -14,6 +15,9 @@ function Statistics({}: StatisticsProps) {
 
   return (
     <div css={wrapperStyle}>
+      <Helmet>
+        <title>CoronaVac - 접종 통계</title>
+      </Helmet>
       <SectionBase>
         <Select list={SIDO} selected={sido} onChange={onChange} />
       </SectionBase>
