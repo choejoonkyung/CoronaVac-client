@@ -78,7 +78,7 @@ function Graph({
       c = chart;
     }
 
-    c.setOption(graphOption as any);
+    c.setOption(graphOption);
   }, [graphOption]);
 
   return (

@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import SectionBase from "../../components/SectionBase";
 import SvgIcon from "../../components/SvgIcon";
 import useInfo from "../../hooks/useInfo";
@@ -11,6 +12,9 @@ function Info({}: InfoProps) {
   const { toGithub } = useInfo();
   return (
     <div css={wrapper}>
+      <Helmet>
+        <title>CoronaVac - 정보</title>
+      </Helmet>
       <SectionBase css={headerStyle}>정보</SectionBase>
       <SectionBase css={infoStyle}>
         <p>
