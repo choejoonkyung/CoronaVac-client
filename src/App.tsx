@@ -7,7 +7,7 @@ import Layout from "./components/Layout";
 import Statistics from "./pages/Statistics";
 import Info from "./pages/Info";
 import NotFoundError from "./pages/NotFoundError";
-import SearchCenter from "./pages/SearchCenter";
+// import SearchCenter from "./pages/SearchCenter";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <div id="portal" />
       <Global styles={global} />
       <Switch>
-        <Route path={["/", "/map", "/map/:id", "/info"]} exact>
+        <Route path={["/", "/info"]} exact>
           <Layout>
             <Layout.Aside>
               <GNB />
@@ -25,9 +25,9 @@ function App() {
                 <Route path="/" exact>
                   <Statistics />
                 </Route>
-                <Route path="/map" exact>
+                {/* <Route path="/map" exact>
                   <SearchCenter />
-                </Route>
+                </Route> */}
                 <Route path="/info" exact>
                   <Info />
                 </Route>
