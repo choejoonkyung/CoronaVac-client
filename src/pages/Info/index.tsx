@@ -69,15 +69,17 @@ const headerStyle = css`
 `;
 
 const infoStyle = css`
-  padding: 1rem;
+  padding: 1.5rem;
 
   p {
+    margin: 0;
     color: ${palette.blueGrey[900]};
     font-size: 1.1rem;
   }
 
   ul {
     margin-top: 1.5rem;
+    margin-bottom: 0;
     li + li {
       margin-top: 1rem;
     }
