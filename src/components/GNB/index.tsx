@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/react";
-import { useRouteMatch } from "react-router-dom";
+// import { useRouteMatch } from "react-router-dom";
 import { boxBorder } from "../../lib/styles/customs";
 import GNBItem from "./GNBItem";
 import { fadeIn } from "../../lib/styles/animations";
@@ -8,7 +8,7 @@ import { fadeIn } from "../../lib/styles/animations";
 export type GNBProps = {};
 
 function GNB({}: GNBProps) {
-  const match = useRouteMatch();
+  // const match = useRouteMatch();
   return (
     <div css={gnbStyle}>
       <div css={logoStyle}>
@@ -16,14 +16,14 @@ function GNB({}: GNBProps) {
       </div>
       <ul css={menuStyle}>
         <GNBItem icon="chart" text="접종 통계" to="/" />
-        <GNBItem
+        {/* <GNBItem
           icon="map"
           text="접종 센터 찾기"
           to="/map"
           isActive={() => {
             return ["/map", "/map/:id"].includes(match.path);
           }}
-        />
+        /> */}
         <GNBItem icon="info" text="정보" to="/info" />
       </ul>
     </div>

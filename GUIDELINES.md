@@ -2,8 +2,7 @@
 
 이 프로젝트는 백신 데이터를 얻기 위하여 공공데이터 오픈 API를 사용합니다.
 
-> 백신 접종 통계 정보 API: [이동](https://data.go.kr/data/15077756/openapi.do)  
-> 백신 예방 접종센터 조회 API: [이동](https://data.go.kr/data/15077586/openapi.do)
+> 백신 접종 통계 정보 API: [이동](https://data.go.kr/data/15077756/openapi.do)
 
 ### 환경변수 설정
 
