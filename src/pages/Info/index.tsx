@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import SectionBase from "../../components/SectionBase";
 import SvgIcon from "../../components/SvgIcon";
 import useInfo from "../../hooks/useInfo";
+import media from "../../lib/styles/media";
 import palette from "../../lib/styles/palette";
 
 export type InfoProps = {};
@@ -60,6 +61,12 @@ function Info({}: InfoProps) {
 const wrapper = css`
   section + section {
     margin-top: 1rem;
+  }
+
+  ${media.small} {
+    section {
+      margin: 0 1rem;
+    }
   }
 `;
 
