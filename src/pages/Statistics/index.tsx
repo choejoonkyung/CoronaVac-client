@@ -7,6 +7,7 @@ import useSidoSelect from "../../hooks/useSidoSelect";
 import { SIDO } from "../../lib/constants";
 import StatusGraph from "../../components/StatusGraph";
 import { Helmet } from "react-helmet-async";
+import media from "../../lib/styles/media";
 
 export type StatisticsProps = {};
 
@@ -34,6 +35,12 @@ function Statistics({}: StatisticsProps) {
 const wrapperStyle = css`
   section + section {
     margin-top: 1rem;
+  }
+
+  ${media.small} {
+    section {
+      margin: 0 1rem;
+    }
   }
 `;
 

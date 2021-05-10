@@ -5,6 +5,7 @@ import palette from "../../lib/styles/palette";
 import SvgIcon, { SvgIconType } from "../SvgIcon";
 import * as H from "history";
 import { navFadeIn } from "../../lib/styles/animations";
+import media from "../../lib/styles/media";
 
 export type GNBItemProps = {
   icon: SvgIconType;
@@ -36,6 +37,15 @@ const liStyle = css`
     border-bottom-left-radius: 0.75rem;
     border-bottom-right-radius: 0.75rem;
   }
+  ${media.small} {
+    &:first-of-type {
+      border-top-left-radius: 0.75rem;
+      border-top-right-radius: 0;
+    }
+    &:last-child {
+      border-top-right-radius: 0.75rem;
+    }
+  }
 `;
 
 const navStyle = css`
@@ -60,6 +70,10 @@ const navStyle = css`
     margin-left: 1rem;
   }
 
+  ${media.small} {
+    justify-content: center;
+  }
+
   &.active {
     background: ${palette.grey[100]};
     border-left: 0.1875rem solid ${palette.blueGrey[900]};
@@ -71,6 +85,12 @@ const navStyle = css`
     border-bottom-right-radius: inherit;
 
     animation: ${navFadeIn} 0.5s ease-in-out 1;
+
+    ${media.small} {
+      border-left: 0;
+      border-top: 0.1875rem solid ${palette.blueGrey[900]};
+      border-top-right-radius: inherit;
+    }
 
     span {
       font-weight: bold;

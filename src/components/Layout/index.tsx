@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 import { LEFT_SIDE_BAR_WIDTH } from "../../lib/constants";
+import media from "../../lib/styles/media";
 
 export type LayoutProps = {
   children: React.ReactNode;
@@ -40,6 +41,13 @@ const leftBarStyle = css`
   display: flex;
   padding-top: 3rem;
   padding-bottom: 3rem;
+
+  ${media.small} {
+    position: relative;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    width: 100%;
+  }
 `;
 
 const mainStyle = css`
@@ -49,6 +57,12 @@ const mainStyle = css`
   padding-left: 5rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
+
+  ${media.small} {
+    padding-left: 0;
+    padding-top: 0;
+    margin-left: 0;
+  }
 `;
 
 export default Layout;

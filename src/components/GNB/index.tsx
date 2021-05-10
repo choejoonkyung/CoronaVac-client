@@ -4,6 +4,7 @@ import { css } from "@emotion/react";
 import { boxBorder } from "../../lib/styles/customs";
 import GNBItem from "./GNBItem";
 import { fadeIn } from "../../lib/styles/animations";
+import media from "../../lib/styles/media";
 
 export type GNBProps = {};
 
@@ -47,6 +48,11 @@ const logoStyle = css`
     animation: 0.5s ${fadeIn} ease-in;
     height: 2.5rem;
   }
+
+  ${media.small} {
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 const menuStyle = css`
@@ -56,6 +62,14 @@ const menuStyle = css`
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
+
+  ${media.small} {
+    display: flex;
+    margin: 0 1rem;
+    li {
+      width: 100%;
+    }
+  }
 `;
 
 export default GNB;
