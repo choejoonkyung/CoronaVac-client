@@ -17,7 +17,7 @@ function Statistics({}: StatisticsProps) {
   return (
     <div css={wrapperStyle}>
       <Helmet>
-        <title>CoronaVac - 접종 통계</title>
+        <title>CoronaVac - 코로나 백신 접종 통계</title>
       </Helmet>
       <SectionBase>
         <Select list={SIDO} selected={sido} onChange={onChange} />
