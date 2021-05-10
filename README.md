@@ -18,7 +18,7 @@
 
 ### Deploy
 
-이 프로젝트는 Vercel를 통하여 [배포](https://corona-vac-client.vercel.app/) 되었습니다.
+이 프로젝트는 Vercel를 통하여 [배포](https://coronavac.vercel.app/) 되었습니다.
 
 ## Run on your machine
 
