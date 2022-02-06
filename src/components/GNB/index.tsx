@@ -1,7 +1,6 @@
 import React from "react";
 import { css } from "@emotion/react";
-// import { useRouteMatch } from "react-router-dom";
-import { boxBorder } from "../../lib/styles/customs";
+import { boxBorder, sectionHeaderStyle } from "../../lib/styles/customs";
 import GNBItem from "./GNBItem";
 import { fadeIn } from "../../lib/styles/animations";
 import media from "../../lib/styles/media";
@@ -9,7 +8,6 @@ import media from "../../lib/styles/media";
 export type GNBProps = {};
 
 function GNB({}: GNBProps) {
-  // const match = useRouteMatch();
   return (
     <div css={gnbStyle}>
       <div css={logoStyle}>
@@ -17,7 +15,7 @@ function GNB({}: GNBProps) {
       </div>
 
       <nav>
-        <h2 css={navHeaderStyle}>글로벌 네비게이션</h2>
+        <h2 css={sectionHeaderStyle}>글로벌 네비게이션</h2>
         <ul css={menuStyle}>
           <GNBItem icon="chart" text="접종 통계" to="/" />
           <GNBItem icon="info" text="정보" to="/info" />
@@ -26,15 +24,6 @@ function GNB({}: GNBProps) {
     </div>
   );
 }
-
-const navHeaderStyle = css`
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  font-size: 1px;
-  overflow: hidden;
-  opacity: 0;
-`;
 
 const gnbStyle = css`
   display: flex;

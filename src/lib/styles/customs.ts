@@ -33,3 +33,12 @@ export const boxBorder = css`
   box-shadow: rgb(0 0 0 / 2%) -0.0625rem 0.0625rem 0.375rem;
   border-radius: 0.75rem;
 `;
+
+export const sectionHeaderStyle = css`
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  overflow: hidden;
+  opacity: 0;
+`;
