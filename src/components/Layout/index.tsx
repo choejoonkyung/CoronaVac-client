@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "@emotion/react";
 import { LEFT_SIDE_BAR_WIDTH } from "../../lib/constants";
 import media from "../../lib/styles/media";
+import { sectionHeaderStyle } from "../../lib/styles/customs";
 
 export type LayoutProps = {
   children: React.ReactNode;
@@ -18,7 +19,7 @@ export type SideProps = {
 function Aside({ children }: SideProps) {
   return (
     <aside css={leftBarStyle}>
-      <h2>코로나백 로고 및 메뉴</h2>
+      <h2 css={sectionHeaderStyle}>코로나백 로고 및 메뉴</h2>
       {children}
     </aside>
   );
