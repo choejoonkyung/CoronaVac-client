@@ -13,7 +13,7 @@ export type SelectProps = {
 
 function Select({ list = [], onChange, selected, height = 3 }: SelectProps) {
   return (
-    <div css={wrapperStyle}>
+    <div css={wrapperStyle} role="selector">
       <select
         css={selectStyle(height)}
         onChange={onChange}
