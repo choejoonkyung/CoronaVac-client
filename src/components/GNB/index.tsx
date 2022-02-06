@@ -15,21 +15,26 @@ function GNB({}: GNBProps) {
       <div css={logoStyle}>
         <img src="/logo.png" alt="logo" />
       </div>
-      <ul css={menuStyle}>
-        <GNBItem icon="chart" text="접종 통계" to="/" />
-        {/* <GNBItem
-          icon="map"
-          text="접종 센터 찾기"
-          to="/map"
-          isActive={() => {
-            return ["/map", "/map/:id"].includes(match.path);
-          }}
-        /> */}
-        <GNBItem icon="info" text="정보" to="/info" />
-      </ul>
+
+      <nav>
+        <h2 css={navHeaderStyle}>글로벌 네비게이션</h2>
+        <ul css={menuStyle}>
+          <GNBItem icon="chart" text="접종 통계" to="/" />
+          <GNBItem icon="info" text="정보" to="/info" />
+        </ul>
+      </nav>
     </div>
   );
 }
+
+const navHeaderStyle = css`
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  overflow: hidden;
+  opacity: 0;
+`;
 
 const gnbStyle = css`
   display: flex;
