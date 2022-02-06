@@ -8,6 +8,7 @@ import { SIDO } from "../../lib/constants";
 import StatusGraph from "../../components/StatusGraph";
 import { Helmet } from "react-helmet-async";
 import media from "../../lib/styles/media";
+import { sectionHeaderStyle } from "../../lib/styles/customs";
 
 export type StatisticsProps = {};
 
@@ -15,10 +16,11 @@ function Statistics({}: StatisticsProps) {
   const { sido, onChange } = useSidoSelect();
 
   return (
-    <div css={wrapperStyle}>
+    <article css={wrapperStyle}>
       <Helmet>
         <title>CoronaVac - 코로나 백신 접종 통계</title>
       </Helmet>
+      <h1 css={sectionHeaderStyle}>백신 통계 정보</h1>
       <SectionBase>
         <Select list={SIDO} selected={sido} onChange={onChange} />
       </SectionBase>
@@ -28,7 +30,7 @@ function Statistics({}: StatisticsProps) {
       <SectionBase css={graphStyle}>
         <StatusGraph sido={sido} />
       </SectionBase>
-    </div>
+    </article>
   );
 }
 
