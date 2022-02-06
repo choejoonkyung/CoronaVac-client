@@ -12,12 +12,14 @@ export type BoxRadioProps = {
 
 function BoxRadio({ list, active, handleRadio }: BoxRadioProps) {
   return (
-    <div css={wrapperStyle}>
+    <div css={wrapperStyle} role="tablist">
       {list.map((v, i) => (
         <button
           css={itemStyle(active === i)}
           key={i}
           onClick={() => handleRadio(i, v)}
+          role="tab"
+          aria-selected={active === i}
         >
           {v}
         </button>
