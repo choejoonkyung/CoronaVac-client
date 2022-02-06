@@ -16,7 +16,12 @@ export type SideProps = {
 };
 
 function Aside({ children }: SideProps) {
-  return <aside css={leftBarStyle}>{children}</aside>;
+  return (
+    <aside css={leftBarStyle}>
+      <h2>코로나백 로고 및 메뉴</h2>
+      {children}
+    </aside>
+  );
 }
 
 export type MainProps = {
