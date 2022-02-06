@@ -16,8 +16,10 @@ function Info({}: InfoProps) {
       <Helmet>
         <title>CoronaVac - 정보</title>
       </Helmet>
-      <SectionBase css={headerStyle}>정보</SectionBase>
-      <SectionBase css={infoStyle}>
+      <SectionBase heading="" css={headerStyle}>
+        정보
+      </SectionBase>
+      <SectionBase heading="" css={infoStyle}>
         <p>
           Coronavac은 공공데이터 API를 이용하여 코로나 백신 예방 접종 통계
           데이터를 쉽게 볼 수 있는 서비스 입니다. 국가 공식 사이트가 아니며
@@ -48,7 +50,7 @@ function Info({}: InfoProps) {
           <li>현재 본 사이트의 소스코드는 깃 허브에서 공유 중 입니다.</li>
         </ul>
       </SectionBase>
-      <SectionBase css={footerStyle}>
+      <SectionBase heading="" css={footerStyle}>
         <a href="mailto: choejunkyung@gmail.com">
           <SvgIcon name="mail" />
         </a>

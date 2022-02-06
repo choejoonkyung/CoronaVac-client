@@ -21,13 +21,13 @@ function Statistics({}: StatisticsProps) {
         <title>CoronaVac - 코로나 백신 접종 통계</title>
       </Helmet>
       <h1 css={sectionHeaderStyle}>백신 통계 정보</h1>
-      <SectionBase>
+      <SectionBase heading="전국구 시도 선택창">
         <Select list={SIDO} selected={sido} onChange={onChange} />
       </SectionBase>
-      <SectionBase css={boardStyle}>
+      <SectionBase heading="1차 접종, 2차 접종 통계 데시보드" css={boardStyle}>
         <StatusBoard sido={sido} />
       </SectionBase>
-      <SectionBase css={graphStyle}>
+      <SectionBase heading="1차 접종, 2차 접종 통계 그래프" css={graphStyle}>
         <StatusGraph sido={sido} />
       </SectionBase>
     </article>

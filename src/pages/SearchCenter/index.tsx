@@ -11,7 +11,7 @@ function SearchCenter({}: SearchCenterProps) {
       <Helmet>
         <title>CoronaVac - 접종 센터 찾기</title>
       </Helmet>
-      <SectionBase>서비스 준비중입니다.</SectionBase>
+      <SectionBase heading="">서비스 준비중입니다.</SectionBase>
     </div>
   );
 }
