@@ -12,28 +12,25 @@ import NotFoundError from "./pages/NotFoundError";
 function App() {
   return (
     <>
-      <div id="portal" />
       <Global styles={global} />
       <Switch>
         <Route path={["/", "/info"]} exact>
-          <Layout>
-            <Layout.Aside>
-              <GNB />
-            </Layout.Aside>
-            <Layout.Main>
-              <Switch>
-                <Route path="/" exact>
-                  <Statistics />
-                </Route>
-                {/* <Route path="/map" exact>
+          <Layout.Aside>
+            <GNB />
+          </Layout.Aside>
+          <Layout.Main>
+            <Switch>
+              <Route path="/" exact>
+                <Statistics />
+              </Route>
+              {/* <Route path="/map" exact>
                   <SearchCenter />
                 </Route> */}
-                <Route path="/info" exact>
-                  <Info />
-                </Route>
-              </Switch>
-            </Layout.Main>
-          </Layout>
+              <Route path="/info" exact>
+                <Info />
+              </Route>
+            </Switch>
+          </Layout.Main>
         </Route>
         <Route>
           <NotFoundError />
