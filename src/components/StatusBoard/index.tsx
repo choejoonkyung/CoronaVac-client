@@ -22,13 +22,8 @@ function StatusBoard({ sido }: StatusBoardProps) {
     "cond[sido::EQ]": sido,
   });
 
-  const {
-    firstCnt,
-    firstIncrease,
-    secondCnt,
-    secondIncrease,
-    baseDate,
-  } = useStatusBoard(data);
+  const { firstCnt, firstIncrease, secondCnt, secondIncrease, baseDate } =
+    useStatusBoard(data);
 
   if (isLoading || error) return <StatusBoardSkeleton />;
   return (
@@ -40,7 +35,7 @@ function StatusBoard({ sido }: StatusBoardProps) {
             {firstCnt ? firstCnt : "0"}
           </p>
           <div css={cntArrowStyle(palette.green[50], palette.green[600])}>
-            <p css={increaseCntStyle(palette.green[600])}>
+            <p css={increaseCntStyle(palette.green[800])}>
               {firstIncrease ? firstIncrease : "0"}
             </p>
             <SvgIcon name="upArrow" />
@@ -52,7 +47,7 @@ function StatusBoard({ sido }: StatusBoardProps) {
             {secondCnt ? secondCnt : "0"}
           </p>
           <div css={cntArrowStyle(palette.blue[50], palette.blue[600])}>
-            <p css={increaseCntStyle(palette.blue[600])}>
+            <p css={increaseCntStyle(palette.blue[800])}>
               {secondIncrease ? secondIncrease : "0"}
             </p>
             <SvgIcon name="upArrow" />
@@ -121,7 +116,7 @@ const dateStyle = css`
   ${resetP}
   margin-top: 1.5rem;
   text-align: right;
-  color: ${palette.blueGrey[200]};
+  color: ${palette.blueGrey[700]};
   font-size: 0.875rem;
 `;
 
